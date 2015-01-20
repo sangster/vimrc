@@ -79,3 +79,11 @@ set noswapfile
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
+
+set number
+let mapleader = "\<Space>"
+
+" NERDTree
+map <Leader>n :NERDTreeToggle<CR>
+" Close NERDTree if it's the only window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

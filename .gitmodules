@@ -40,3 +40,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "bundle/vim-blockle"]
+	path = bundle/vim-blockle
+	url = git@github.com:jgdavey/vim-blockle.git

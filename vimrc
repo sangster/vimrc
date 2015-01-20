@@ -87,3 +87,7 @@ let mapleader = "\<Space>"
 map <Leader>n :NERDTreeToggle<CR>
 " Close NERDTree if it's the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Airline
+set guifont=Source\ Code\ Pro\ Powerline\ 11
+let g:airline_powerline_fonts = 1

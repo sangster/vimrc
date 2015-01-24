@@ -43,3 +43,6 @@
 [submodule "bundle/vim-blockle"]
 	path = bundle/vim-blockle
 	url = git@github.com:jgdavey/vim-blockle.git
+[submodule "bundle/vim-ansible-yaml"]
+	path = bundle/vim-ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git

@@ -46,3 +46,9 @@
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = https://github.com/chase/vim-ansible-yaml.git
+[submodule "vim-change-hash-syntax"]
+	path = vim-change-hash-syntax
+	url = git@github.com:ck3g/vim-change-hash-syntax.git
+[submodule "bundle/vim-change-hash-syntax"]
+	path = bundle/vim-change-hash-syntax
+	url = git@github.com:ck3g/vim-change-hash-syntax.git

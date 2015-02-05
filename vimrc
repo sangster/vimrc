@@ -18,15 +18,6 @@ endif
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-" <Esc> is so far away
-inoremap nn <Esc>
-
-nnoremap <Leader>h :noh<CR>
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
 if has('mouse')
   set mouse=a
 endif
@@ -87,6 +78,14 @@ set autoindent
 
 set number
 let mapleader = "\<Space>"
+
+" <Esc> is so far away
+inoremap nn <Esc>
+" Remove highlights
+nnoremap <Leader>h :noh<CR>
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+inoremap <C-U> <C-G>u<C-U>
 
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>

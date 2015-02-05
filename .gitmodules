@@ -52,3 +52,6 @@
 [submodule "bundle/vim-change-hash-syntax"]
 	path = bundle/vim-change-hash-syntax
 	url = git@github.com:ck3g/vim-change-hash-syntax.git
+[submodule "bundle/scss-syntax.vim"]
+	path = bundle/scss-syntax.vim
+	url = git@github.com:cakebaker/scss-syntax.vim.git

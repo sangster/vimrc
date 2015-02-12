@@ -3,12 +3,6 @@ set nocompatible
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
-" Theme
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
-highlight Normal ctermbg=black
-
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
@@ -80,7 +74,10 @@ set number
 let mapleader = "\<Space>"
 
 " <Esc> is so far away
-inoremap nn <Esc>
+inoremap hn <Esc>
+" Saving from insert mode
+inoremap qw <Esc>:w<CR>a
+
 " Remove highlights
 nnoremap <Leader>h :noh<CR>
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
@@ -103,3 +100,12 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" Theme
+let g:solarized_termcolors=256
+syntax on
+colorscheme solarized
+set background=dark
+"highlight Normal ctermbg=black
+
+set colorcolumn=80

@@ -84,14 +84,20 @@ nnoremap <Leader>h :noh<CR>
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
+set laststatus=2
+set ruler
+set showcmd
+set wildmenu
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+set t_Co=16
+
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>
 " Close NERDTree if it's the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" Airline
-set guifont=Source\ Code\ Pro\ Powerline\ 11
-let g:airline_powerline_fonts = 1
 
 " Tab Completion (SuperTab allows <tab> to work for both)
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -101,11 +107,16 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" Theme
+" Colours!
+set t_Co=256
 let g:solarized_termcolors=256
 syntax on
 colorscheme solarized
 set background=dark
-"highlight Normal ctermbg=black
+highlight Normal ctermbg=16 " black in solarized colors
 
 set colorcolumn=80
+
+" Airline
+set guifont=Source\ Code\ Pro\ Powerline\ 11
+let g:airline_powerline_fonts = 1

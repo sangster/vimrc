@@ -118,9 +118,9 @@ set background=dark
 highlight Normal ctermbg=16 " black in solarized colors
 
 " Change background colour beyond 80
-let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=232
 set colorcolumn=80
+let &colorcolumn=join(range(81,999),",")
 
 " Airline
 set guifont=Source\ Code\ Pro\ Powerline\ 11

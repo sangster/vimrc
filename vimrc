@@ -19,6 +19,7 @@ endif
 if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
+set smartcase
 
 if has("autocmd")
   " Put these in an autocmd group, so that we can delete them easily.
@@ -74,7 +75,7 @@ set number
 let mapleader = "\<Space>"
 
 " <Esc> is so far away
-inoremap hn <Esc>
+inoremap ii <Esc>
 " Saving from insert mode
 inoremap qw <Esc>:w<CR>a
 
@@ -88,6 +89,7 @@ set laststatus=2
 set ruler
 set showcmd
 set wildmenu
+set wildmode=longest,list,full
 set autoindent
 set backspace=indent,eol,start
 set complete-=i
@@ -115,6 +117,9 @@ colorscheme solarized
 set background=dark
 highlight Normal ctermbg=16 " black in solarized colors
 
+" Change background colour beyond 80
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=232
 set colorcolumn=80
 
 " Airline

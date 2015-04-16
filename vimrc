@@ -80,7 +80,7 @@ inoremap ii <Esc>
 inoremap qw <Esc>:w<CR>a
 
 " Remove highlights
-nnoremap <Leader>h :noh<CR>
+nnoremap <Leader>n :noh<CR>
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -97,7 +97,7 @@ set smarttab
 set t_Co=16
 
 " NERDTree
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>h :NERDTreeToggle<CR>
 " Close NERDTree if it's the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 

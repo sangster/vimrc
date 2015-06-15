@@ -19,7 +19,6 @@ endif
 if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
-set smartcase
 
 if has("autocmd")
   " Put these in an autocmd group, so that we can delete them easily.
@@ -102,9 +101,11 @@ map <Leader>h :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Tab Completion (SuperTab allows <tab> to work for both)
+let g:UltiSnipsSnippetDir="~/.vim/snippets/"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -125,3 +126,6 @@ let &colorcolumn=join(range(81,999),",")
 " Airline
 set guifont=Source\ Code\ Pro\ Powerline\ 11
 let g:airline_powerline_fonts = 1
+
+
+set smartcase

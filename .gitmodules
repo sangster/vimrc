@@ -73,3 +73,15 @@
 [submodule "bundle/colorizer"]
 	path = bundle/colorizer
 	url = git@github.com:lilydjwg/colorizer.git
+[submodule "bundle/unicode.vim"]
+	path = bundle/unicode.vim
+	url = https://github.com/chrisbra/unicode.vim
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule "bundle/file-line"]
+	path = bundle/file-line
+	url = https://github.com/bogado/file-line.git

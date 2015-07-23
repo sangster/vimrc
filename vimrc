@@ -71,6 +71,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
 
 set number
+set relativenumber
 let mapleader = "\<Space>"
 
 " <Esc> is so far away

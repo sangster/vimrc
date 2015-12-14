@@ -70,8 +70,12 @@ set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
 
+" Line Numbers
 set number
 set relativenumber
+autocmd FocusLost * :set number
+autocmd FocusGained * :set relativenumber
+
 let mapleader = "\<Space>"
 
 " <Esc> is so far away

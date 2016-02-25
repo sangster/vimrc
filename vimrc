@@ -1,7 +1,39 @@
 set nocompatible
 
-" https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+call plug#begin()
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+Plug 'bogado/file-line'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'chase/vim-ansible-yaml'
+Plug 'chrisbra/unicode.vim'
+Plug 'ck3g/vim-change-hash-syntax'
+Plug 'ck3g/vim-change-hash-syntax'
+Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
+Plug 'honza/vim-snippets'
+Plug 'jgdavey/vim-blockle'
+Plug 'junegunn/fzf.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'lilydjwg/colorizer'
+Plug 'mattn/emmet-vim'
+Plug 'ngmy/vim-rubocop'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'SirVer/ultisnips'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-ruby/vim-ruby'
+call plug#end()
+
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead

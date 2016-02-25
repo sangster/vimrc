@@ -100,6 +100,10 @@ set complete-=i
 set smarttab
 set t_Co=16
 
+" Window Splits
+set splitbelow
+set splitright
+
 " NERDTree
 map <Leader>h :NERDTreeToggle<CR>
 " Close NERDTree if it's the only window open
@@ -111,6 +115,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+let g:ycm_complete_in_comments = 0
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'

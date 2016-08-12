@@ -1,8 +1,6 @@
 set nocompatible
 
 call plug#begin()
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-
 " Ruby plugins
 Plug 'ck3g/vim-change-hash-syntax', {'for': 'ruby'}
 Plug 'ngmy/vim-rubocop', {'for': 'ruby'}
@@ -16,17 +14,19 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 Plug 'tpope/vim-haml', {'for': 'haml'}
+Plug 'tpope/vim-liquid'
 
 Plug 'tpope/vim-rails'
+Plug 'vim-latex/vim-latex'
 
 " Global plugins
+Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'bogado/file-line'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'chrisbra/unicode.vim'
 Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'mattn/emmet-vim'
 Plug 'rking/ag.vim'
@@ -36,6 +36,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
+
+
+Plug 'junegunn/fzf', {'dir': '~/.config/fzf', 'do': './install --all'}
+Plug 'junegunn/fzf.vim'
 
 " Unsure about these ones
 Plug 'ervandew/supertab'
@@ -145,8 +149,12 @@ set t_Co=16
 set splitbelow
 set splitright
 
+" FZF
+nnoremap <Leader>f :Files<CR>
+
 " NERDTree
 map <Leader>h :NERDTreeToggle<CR>
+map <Leader>H :NERDTreeFind<CR>
 " Close NERDTree if it's the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -178,5 +186,12 @@ let &colorcolumn=join(range(81,999),",")
 set guifont=Source\ Code\ Pro\ Powerline\ 11
 let g:airline_powerline_fonts = 1
 
-
 set smartcase
+
+" Update inactive filename color
+let g:airline_theme_patch_func = 'AirlineThemePatch'
+function! AirlineThemePatch(palette)
+  for colors in values(a:palette.inactive)
+    let colors[2] = 245
+  endfor
+endfunction

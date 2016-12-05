@@ -7,6 +7,10 @@ Plug 'ngmy/vim-rubocop', {'for': 'ruby'}
 Plug 'tpope/vim-bundler', {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 
+" Javascript & Friends
+Plug 'jason0x43/vim-js-indent'
+Plug 'leafgarland/typescript-vim'
+
 " Other language plugins
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
 Plug 'chase/vim-ansible-yaml', {'for': 'yaml'}
@@ -57,9 +61,18 @@ endif
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+" Mouse Support
 if has('mouse')
   set mouse=a
 endif
+" Screen/tmux can also handle xterm mousiness, but Vim doesn't detect it by
+" default.
+if &term == "screen"
+  set ttymouse=xterm2
+elseif &term == "xterm-256color"
+  set ttymouse=urxvt
+endif
+
 
 if &t_Co > 2 || has("gui_running")
   set hlsearch
